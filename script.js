@@ -1,5 +1,6 @@
 const form = document.querySelector("form");
 const OutPutBox = document.querySelector("#OutPutBox");
+const ImgBox = document.querySelector(".img-box");
 form.addEventListener("submit", ShowResult);
   
 async function ShowResult(e) {
@@ -12,6 +13,7 @@ async function ShowResult(e) {
 }
 
 function HandleData(result) {
+  ImgBox.classList.add('none');
   OutPutBox.innerHTML = "";
 
   for (let i = 0; i < result.meals.length; i++) {

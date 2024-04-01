@@ -63,4 +63,17 @@ body {
     margin-left: 1em;
 }
 
+.img-box{
+  height: 20em;
+  width: 27em;
+  text-align: center;
+}
 
+.img-box img{
+  height: 100%;
+  margin-right: 7em;
+}
+
+.none {
+  display: none;
+}
