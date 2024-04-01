@@ -1,0 +1,66 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#TopHeading {
+  text-align: center;
+  margin-top: 1em;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#input {
+  border-radius: 0.4em;
+  outline-style: none;
+}
+
+#SubBtn {
+  border-radius: 0.3em;
+  border: none;
+  margin-left: 1vmax;
+}
+
+#OutPutBox {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;  
+}
+#OutPutBox img {
+  height: 16vmax;
+  width: 18vmax;
+  border-radius: 10%;
+}
+
+.box {
+  width: 100vw;
+}
+
+.card-title {
+  color: blueviolet;
+}
+
+.box:hover{
+  background-color:tan ;
+  cursor: pointer;
+}
+
+.YouTube h6{
+    display: inline-block;
+    margin-left: 1em;
+}
+
+
