@@ -7,8 +7,11 @@ async function ShowResult(e) {
   e.preventDefault();
   const responce = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input.value}`);
   const result = await responce.json();
-  console.log(result);
-  HandleData(result);
+  if (result.meals == null) {
+    alert("Not available recipe!");
+  } else {
+    HandleData(result);
+  }
   input.value = "";
 }
 
