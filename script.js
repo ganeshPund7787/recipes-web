@@ -20,29 +20,14 @@ function HandleData(result) {
   OutPutBox.innerHTML = "";
 
   for (let i = 0; i < result.meals.length; i++) {
-    OutPutBox.innerHTML += `<div class="card box mb-3" style="max-width: 540px"><div class="row g-0"><div class="col-md-12">
-    <img src="https://media0.giphy.com/media/j2dv7H2pgFyoICoD6E/200w.gif"class="img-fluid border"alt="..."/></div>
-    <div class="col-md-12"><div class="card-body"> <h5 class="card-title"></h5> <p class="card-text recipe"></p>
-   </div></div><p class="YouTube"></p></div></div><hr></hr>`;
-  }
-  InsertData(result);
-}
-
-function InsertData(result) {
-  const CardImg = document.querySelectorAll("#OutPutBox img");
-  const CardTitle = document.querySelectorAll(".card-title");
-  const Recipe = document.querySelectorAll(".recipe");
-  const YouTubeSrc = document.querySelectorAll(".YouTube");
-  
-  for (let i = 0; i < result.meals.length; i++) {
     const Data = Object.values(result.meals[i]);
-    
-    CardImg[i].src = Data[6];
-    CardTitle[i].innerHTML = `${Data[3]} ${Data[4]}`;
-    Recipe[i].innerText = Data[5];
-    const Link = Data[49];
-    console.log(Link);
-    YouTubeSrc[i].innerHTML = `<h6> more : </h6><a href="${Link}">${Link}</a>`;
+      const Link = Data[49];
+    OutPutBox.innerHTML += `<div class="card box mb-3" style="max-width: 540px">
+    <div class="row g-0"><div class="col-md-12">
+    <img src="${Data[6]}"class="img-fluid border"alt="..."/></div>
+    <div class="col-md-12"><div class="card-body">
+    <h5 class="card-title">${Data[3]} ${Data[4]}</h5>
+    <p class="card-text recipe">${Data[5]}</p></div></div
+    <p class="YouTube"> <h6> more : </h6><a href="${Link}">${Link}</a> </p></div></div><hr></hr>`;
   }
 }
-
